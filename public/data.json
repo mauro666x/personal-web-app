@@ -6,7 +6,7 @@
         "photo": "assets/profile.jpg",
         "resumeUrl": "https://www.linkedin.com/in/mbenavidesc",
         "location": "Bogotá, Colombia",
-        "email": "mfbenavides@gmail.com"
+        "email": "mfbenavidesc@gmail.com"
     },
     "about": {
         "summary": "Passionate engineering leader with deep expertise in cloud infrastructure, DevOps practices, and team management. Specialized in helping organizations build the future using Azure, GCP, Kubernetes, Docker, and Infrastructure as Code. Experienced in designing scalable cloud architectures, implementing secure CI/CD pipelines, and mentoring engineering teams to deliver exceptional results.",
@@ -170,12 +170,14 @@
         {
             "name": "Google Cloud Certified Professional Cloud Architect",
             "issuer": "Google Cloud",
-            "date": "2021"
+            "date": "2021",
+            "badgeLogo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
         },
         {
             "name": "Azure Administrator Associate",
             "issuer": "Microsoft",
-            "date": "2022"
+            "date": "2022",
+            "badgeLogo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
         },
         {
             "name": "Devops Bootcamp",

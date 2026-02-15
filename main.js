@@ -7,6 +7,13 @@ import './style.css';
 // ── State ──
 let data = null;
 
+// ── Helpers ──
+function esc(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
 // ── Bootstrap ──
 async function init() {
   try {
@@ -47,15 +54,18 @@ function renderHero() {
   // Photo
   const photoEl = document.getElementById('heroPhoto');
   if (personal.photo) {
-    photoEl.innerHTML = `<img src="${personal.photo}" alt="${personal.name}" />`;
+    const img = document.createElement('img');
+    img.src = personal.photo;
+    img.alt = personal.name;
+    img.loading = 'eager';
+    photoEl.replaceChildren(img);
   }
 
-  // CV download
-  const cvBtn = document.getElementById('downloadCv');
+  // LinkedIn button
+  const linkedinBtn = document.getElementById('viewLinkedin');
   if (personal.resumeUrl) {
-    cvBtn.href = personal.resumeUrl;
-    cvBtn.setAttribute('download', '');
-    cvBtn.style.display = 'inline-flex';
+    linkedinBtn.href = personal.resumeUrl;
+    linkedinBtn.style.display = 'inline-flex';
   }
 }
 
@@ -66,9 +76,12 @@ function renderAbout() {
   document.getElementById('aboutSummary').textContent = about.summary;
 
   const highlightsEl = document.getElementById('aboutHighlights');
-  highlightsEl.innerHTML = about.highlights
-    .map(h => `<div class="highlight-item">${h}</div>`)
-    .join('');
+  highlightsEl.replaceChildren(...about.highlights.map(h => {
+    const div = document.createElement('div');
+    div.className = 'highlight-item';
+    div.textContent = h;
+    return div;
+  }));
 }
 
 // ── Skills ──
@@ -77,17 +90,17 @@ function renderSkills() {
   container.innerHTML = data.skillCategories
     .map(cat => `
       <div class="skill-category fade-in">
-        <h4 class="skill-category-label">${cat.category}</h4>
+        <h4 class="skill-category-label">${esc(cat.category)}</h4>
         <div class="skills-grid">
           ${cat.skills.map(s => `
             <div class="skill-card">
               <div class="skill-icon">
                 ${s.logo
-        ? `<img src="${s.logo}" alt="${s.name}" class="skill-logo${s.dark ? ' dark-logo' : ''}" />`
-        : `<span>${s.icon || '⚙️'}</span>`
+        ? `<img src="${esc(s.logo)}" alt="${esc(s.name)}" loading="lazy" class="skill-logo${s.dark ? ' dark-logo' : ''}" />`
+        : `<span>${esc(s.icon || '⚙️')}</span>`
       }
               </div>
-              <div class="skill-name">${s.name}</div>
+              <div class="skill-name">${esc(s.name)}</div>
             </div>
           `).join('')}
         </div>
@@ -106,17 +119,17 @@ function renderExperience() {
         <div class="timeline-content">
           <div class="timeline-header">
             <div>
-              <div class="timeline-role">${exp.role}</div>
+              <div class="timeline-role">${esc(exp.role)}</div>
               <div class="timeline-company">
-                ${exp.company}
-                ${exp.previousName ? `<span class="timeline-company-prev"> (${exp.previousName})</span>` : ''}
+                ${esc(exp.company)}
+                ${exp.previousName ? `<span class="timeline-company-prev"> (${esc(exp.previousName)})</span>` : ''}
               </div>
             </div>
-            <span class="timeline-dates">${exp.startDate} — ${exp.endDate}</span>
+            <span class="timeline-dates">${esc(exp.startDate)} — ${esc(exp.endDate)}</span>
           </div>
-          <p class="timeline-description">${exp.description}</p>
+          <p class="timeline-description">${esc(exp.description)}</p>
           <ul class="timeline-highlights">
-            ${exp.highlights.map(h => `<li>${h}</li>`).join('')}
+            ${exp.highlights.map(h => `<li>${esc(h)}</li>`).join('')}
           </ul>
         </div>
       </div>
@@ -141,13 +154,13 @@ function renderEducation() {
     .map(edu => `
       <div class="education-card fade-in">
         <div class="education-icon">🎓</div>
-        <div class="education-degree">${edu.degree || 'Degree'}</div>
-        <div class="education-institution">${edu.institution}</div>
+        <div class="education-degree">${esc(edu.degree || 'Degree')}</div>
+        <div class="education-institution">${esc(edu.institution)}</div>
         ${edu.startDate || edu.endDate
-        ? `<div class="education-dates">${edu.startDate || ''} ${edu.startDate && edu.endDate ? '—' : ''} ${edu.endDate || ''}</div>`
+        ? `<div class="education-dates">${esc(edu.startDate || '')} ${edu.startDate && edu.endDate ? '—' : ''} ${esc(edu.endDate || '')}</div>`
         : ''
       }
-        ${edu.description ? `<p class="education-description">${edu.description}</p>` : ''}
+        ${edu.description ? `<p class="education-description">${esc(edu.description)}</p>` : ''}
       </div>
     `)
     .join('');
@@ -169,11 +182,14 @@ function renderCertifications() {
   grid.innerHTML = data.certifications
     .map(cert => `
       <div class="cert-card fade-in">
-        <div class="cert-badge">${cert.badgeEmoji || '🏆'}</div>
+        <div class="cert-badge">${cert.badgeLogo
+          ? `<img src="${esc(cert.badgeLogo)}" alt="${esc(cert.issuer)}" loading="lazy" class="cert-logo" />`
+          : esc(cert.badgeEmoji || '🏆')
+        }</div>
         <div class="cert-info">
-          <div class="cert-name">${cert.name}</div>
-          <div class="cert-issuer">${cert.issuer}</div>
-          ${cert.date ? `<div class="cert-date">${cert.date}</div>` : ''}
+          <div class="cert-name">${esc(cert.name)}</div>
+          <div class="cert-issuer">${esc(cert.issuer)}</div>
+          ${cert.date ? `<div class="cert-date">${esc(cert.date)}</div>` : ''}
         </div>
       </div>
     `)
@@ -188,15 +204,15 @@ function renderContact() {
 
   if (contact.email) {
     links.push(`
-      <a href="mailto:${contact.email}" class="contact-link">
+      <a href="mailto:${esc(contact.email)}" class="contact-link">
         <span class="contact-link-icon">✉️</span>
-        <span>${contact.email}</span>
+        <span>${esc(contact.email)}</span>
       </a>
     `);
   }
   if (contact.linkedin) {
     links.push(`
-      <a href="${contact.linkedin}" target="_blank" rel="noopener" class="contact-link">
+      <a href="${esc(contact.linkedin)}" target="_blank" rel="noopener" class="contact-link">
         <span class="contact-link-icon">💼</span>
         <span>LinkedIn</span>
       </a>
@@ -204,7 +220,7 @@ function renderContact() {
   }
   if (contact.github) {
     links.push(`
-      <a href="${contact.github}" target="_blank" rel="noopener" class="contact-link">
+      <a href="${esc(contact.github)}" target="_blank" rel="noopener" class="contact-link">
         <span class="contact-link-icon">💻</span>
         <span>GitHub</span>
       </a>
@@ -221,13 +237,13 @@ function renderFooter() {
   const socials = [];
 
   if (contact.linkedin) {
-    socials.push(`<a href="${contact.linkedin}" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">💼</a>`);
+    socials.push(`<a href="${esc(contact.linkedin)}" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">💼</a>`);
   }
   if (contact.github) {
-    socials.push(`<a href="${contact.github}" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">💻</a>`);
+    socials.push(`<a href="${esc(contact.github)}" target="_blank" rel="noopener" class="footer-social-link" aria-label="GitHub">💻</a>`);
   }
   if (contact.email) {
-    socials.push(`<a href="mailto:${contact.email}" class="footer-social-link" aria-label="Email">✉️</a>`);
+    socials.push(`<a href="mailto:${esc(contact.email)}" class="footer-social-link" aria-label="Email">✉️</a>`);
   }
 
   socialsEl.innerHTML = socials.join('');
