@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mauricio Benavides — Engineering Lead & DevOps Engineer</title>
+  <meta name="description" content="Personal portfolio of Mauricio Benavides — Engineering Lead & DevOps Engineer specializing in Azure, GCP, Kubernetes, Docker, and Infrastructure as Code." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">MB</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="section hero" id="home">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name" id="heroName">Mauricio Benavides</h1>
+        <p class="hero-title" id="heroTitle">Engineering Lead | DevOps Engineer</p>
+        <p class="hero-tagline" id="heroTagline">Building and scaling resilient cloud infrastructure and leading high-performing engineering teams.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#" class="btn btn-outline" id="downloadCv" style="display:none;">Download CV</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrapper">
+        <div class="hero-photo" id="heroPhoto">
+          <div class="hero-photo-placeholder">
+            <span>MB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ ABOUT ═══════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text glass-card">
+          <p id="aboutSummary"></p>
+          <div class="about-highlights" id="aboutHighlights"></div>
+        </div>
+        <div class="about-skills">
+          <h3 class="subsection-title">Tech Stack</h3>
+          <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ EDUCATION ═══════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="education-grid" id="educationGrid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CERTIFICATIONS ═══════════════ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid" id="certsGrid">
+        <div class="empty-state glass-card">
+          <span class="empty-icon">🏅</span>
+          <p>Certifications coming soon</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTACT ═══════════════ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-grid">
+        <div class="contact-info glass-card">
+          <h3>Let's Connect</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <div class="contact-links" id="contactLinks"></div>
+        </div>
+        <form class="contact-form glass-card" id="contactForm">
+          <div class="form-group">
+            <label for="formName">Name</label>
+            <input type="text" id="formName" name="name" required placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Email</label>
+            <input type="email" id="formEmail" name="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Message</label>
+            <textarea id="formMessage" name="message" rows="5" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p class="footer-copy">&copy; 2026 Mauricio Benavides. All rights reserved.</p>
+      <div class="footer-socials" id="footerSocials"></div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
