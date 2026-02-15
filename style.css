@@ -810,20 +810,20 @@ ul {
 }
 
 .cert-badge {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   border-radius: var(--radius-md);
-  background: var(--accent-dim);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--fs-xl);
+  font-size: var(--fs-2xl);
   flex-shrink: 0;
 }
 
 .cert-logo {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 

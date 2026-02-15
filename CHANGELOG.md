@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.1.1] - 2026-02-15
+
+### Changed
+
+- **Certification Badges** — Replaced generic technology logos (Devicon Google Cloud & Azure icons) with official Credly certification badge images for GCP Professional Cloud Architect and Azure Administrator Associate
+- **Local Badge Assets** — Badge images now served locally from `assets/` instead of external CDN URLs
+
 ## [1.1.0] - 2026-02-15
 
 ### Added
