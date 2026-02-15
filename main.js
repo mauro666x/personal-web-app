@@ -10,7 +10,7 @@ let data = null;
 // ── Bootstrap ──
 async function init() {
   try {
-    const res = await fetch('./data.json');
+    const res = await fetch('/data.json');
     data = await res.json();
     render();
     setupNavigation();
