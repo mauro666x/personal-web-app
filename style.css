@@ -64,7 +64,9 @@
    RESET & BASE
    ══════════════════════════════════════════════════ */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -96,7 +98,9 @@ img {
   display: block;
 }
 
-ul { list-style: none; }
+ul {
+  list-style: none;
+}
 
 .container {
   width: 100%;
@@ -219,9 +223,11 @@ ul { list-style: none; }
 .nav-toggle.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .nav-toggle.open span:nth-child(2) {
   opacity: 0;
 }
+
 .nav-toggle.open span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -231,8 +237,8 @@ ul { list-style: none; }
    ══════════════════════════════════════════════════ */
 
 .section {
-  min-height: 100vh;
-  padding: var(--space-24) 0;
+  min-height: auto;
+  padding: var(--space-12) 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -361,8 +367,15 @@ ul { list-style: none; }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 /* Scroll indicator */
@@ -384,9 +397,22 @@ ul { list-style: none; }
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: rotate(45deg) translateY(0); }
-  40% { transform: rotate(45deg) translateY(8px); }
-  60% { transform: rotate(45deg) translateY(4px); }
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: rotate(45deg) translateY(0);
+  }
+
+  40% {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  60% {
+    transform: rotate(45deg) translateY(4px);
+  }
 }
 
 /* ══════════════════════════════════════════════════
@@ -478,18 +504,35 @@ ul { list-style: none; }
   flex-shrink: 0;
 }
 
-/* Skills grid */
+/* Skills categories */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.skill-category-label {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--border-card);
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
 }
 
 .skill-card {
   background: var(--bg-card);
   border: 1px solid var(--border-card);
   border-radius: var(--radius-md);
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-3);
   text-align: center;
   transition: var(--transition);
   cursor: default;
@@ -504,6 +547,21 @@ ul { list-style: none; }
 .skill-icon {
   font-size: var(--fs-2xl);
   margin-bottom: var(--space-2);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.skill-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.skill-logo.dark-logo {
+  filter: brightness(0) invert(1);
 }
 
 .skill-name {
@@ -939,14 +997,26 @@ ul { list-style: none; }
    ══════════════════════════════════════════════════ */
 
 @media (max-width: 1024px) {
-  .hero-name { font-size: var(--fs-5xl); }
-  .hero-content { gap: var(--space-10); }
-  .hero-photo { width: 260px; height: 260px; }
+  .hero-name {
+    font-size: var(--fs-5xl);
+  }
+
+  .hero-content {
+    gap: var(--space-10);
+  }
+
+  .hero-photo {
+    width: 260px;
+    height: 260px;
+  }
 }
 
 @media (max-width: 768px) {
+
   /* Nav mobile */
-  .nav-toggle { display: flex; }
+  .nav-toggle {
+    display: flex;
+  }
 
   .nav-links {
     position: fixed;
@@ -964,7 +1034,9 @@ ul { list-style: none; }
     border-left: 1px solid var(--border-card);
   }
 
-  .nav-links.open { right: 0; }
+  .nav-links.open {
+    right: 0;
+  }
 
   /* Hero mobile */
   .hero-content {
@@ -972,34 +1044,90 @@ ul { list-style: none; }
     text-align: center;
   }
 
-  .hero-name { font-size: var(--fs-4xl); }
-  .hero-tagline { margin: 0 auto var(--space-10); }
-  .hero-cta { justify-content: center; }
-  .hero-photo { width: 200px; height: 200px; }
-  .hero-photo-wrapper { order: -1; }
+  .hero-name {
+    font-size: var(--fs-4xl);
+  }
+
+  .hero-tagline {
+    margin: 0 auto var(--space-10);
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-photo-wrapper {
+    order: -1;
+  }
 
   /* About mobile */
-  .about-grid { grid-template-columns: 1fr; }
-  .about-highlights { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: repeat(3, 1fr); }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   /* Contact mobile */
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 
   /* Footer mobile */
-  .footer-content { flex-direction: column; gap: var(--space-4); text-align: center; }
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
 
   /* Section padding */
-  .section { padding: var(--space-16) 0; min-height: auto; }
-  .section-title { font-size: var(--fs-2xl); margin-bottom: var(--space-10); }
+  .section {
+    padding: var(--space-16) 0;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-10);
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-name { font-size: var(--fs-3xl); }
-  .skills-grid { grid-template-columns: repeat(2, 1fr); }
-  .education-grid { grid-template-columns: 1fr; }
-  .certs-grid { grid-template-columns: 1fr; }
-  .timeline::before { left: 14px; }
-  .timeline-item { padding-left: 48px; }
-  .timeline-dot { left: 6px; }
+  .hero-name {
+    font-size: var(--fs-3xl);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 14px;
+  }
+
+  .timeline-item {
+    padding-left: 48px;
+  }
+
+  .timeline-dot {
+    left: 6px;
+  }
 }

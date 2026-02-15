@@ -1,70 +1,105 @@
 {
     "personal": {
         "name": "Mauricio Benavides",
-        "title": "Engineering Lead | DevOps Engineer",
+        "title": "Engineering Director | DevOps Engineer",
         "tagline": "Building and scaling resilient cloud infrastructure and leading high-performing engineering teams.",
-        "photo": "",
-        "resumeUrl": "",
+        "photo": "assets/profile.jpg",
+        "resumeUrl": "https://www.linkedin.com/in/mbenavidesc",
         "location": "Bogotá, Colombia",
-        "email": ""
+        "email": "mfbenavides@gmail.com"
     },
     "about": {
         "summary": "Passionate engineering leader with deep expertise in cloud infrastructure, DevOps practices, and team management. Specialized in helping organizations build the future using Azure, GCP, Kubernetes, Docker, and Infrastructure as Code. Experienced in designing scalable cloud architectures, implementing secure CI/CD pipelines, and mentoring engineering teams to deliver exceptional results.",
         "highlights": [
-            "Cloud Architecture & Design",
-            "CI/CD Pipeline Engineering",
+            "Engineering Director",
             "Team Leadership & Mentoring",
-            "Infrastructure as Code"
+            "Cloud Architecture & Design",
+            "DataOps Engineering",
+            "Cloud and Devops Engineering",
+            "CI/CD Pipeline Engineering"
         ]
     },
-    "skills": [
+    "skillCategories": [
         {
-            "name": "Azure",
-            "icon": "☁️"
+            "category": "Software Development",
+            "skills": [
+                {
+                    "name": "Python",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                },
+                {
+                    "name": "Node.js",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+                },
+                {
+                    "name": "Microservices",
+                    "icon": "🧩"
+                }
+            ]
         },
         {
-            "name": "GCP",
-            "icon": "🌐"
+            "category": "Cloud",
+            "skills": [
+                {
+                    "name": "Azure",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+                },
+                {
+                    "name": "GCP",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+                }
+            ]
         },
         {
-            "name": "Kubernetes",
-            "icon": "⚙️"
+            "category": "DevOps",
+            "skills": [
+                {
+                    "name": "Kubernetes",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg"
+                },
+                {
+                    "name": "Docker",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                },
+                {
+                    "name": "Terraform",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg"
+                },
+                {
+                    "name": "Jenkins",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg"
+                },
+                {
+                    "name": "GitHub Actions",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg",
+                    "dark": true
+                },
+                {
+                    "name": "Azure DevOps",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuredevops/azuredevops-plain.svg"
+                },
+                {
+                    "name": "Linux",
+                    "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+                },
+                {
+                    "name": "CI/CD",
+                    "icon": "♾️"
+                }
+            ]
         },
         {
-            "name": "Docker",
-            "icon": "🐳"
-        },
-        {
-            "name": "Terraform",
-            "icon": "🏗️"
-        },
-        {
-            "name": "Jenkins",
-            "icon": "🔧"
-        },
-        {
-            "name": "GitHub Actions",
-            "icon": "🚀"
-        },
-        {
-            "name": "Azure DevOps",
-            "icon": "🔄"
-        },
-        {
-            "name": "Linux",
-            "icon": "🐧"
-        },
-        {
-            "name": "CI/CD",
-            "icon": "♾️"
-        },
-        {
-            "name": "IaC",
-            "icon": "📝"
-        },
-        {
-            "name": "Python",
-            "icon": "🐍"
+            "category": "Data",
+            "skills": [
+                {
+                    "name": "Fabric",
+                    "icon": "🔷"
+                },
+                {
+                    "name": "Synapse",
+                    "icon": "⚡"
+                }
+            ]
         }
     ],
     "experience": [
@@ -116,17 +151,41 @@
     "education": [
         {
             "institution": "Universidad de Buenos Aires (UBA)",
-            "degree": "",
-            "field": "",
-            "startDate": "",
-            "endDate": "",
-            "description": ""
+            "degree": "Specialist",
+            "field": "Telecommunications Engineering",
+            "startDate": "2011",
+            "endDate": "2013",
+            "description": "Specialist in Telecommunications Engineering"
+        },
+        {
+            "institution": "Universidad Nacional de Colombia",
+            "degree": "Engineer's Degree",
+            "field": "Electronic Engineering",
+            "startDate": "2006",
+            "endDate": "2011",
+            "description": "Electronic Engineer"
         }
     ],
-    "certifications": [],
+    "certifications": [
+        {
+            "name": "Google Cloud Certified Professional Cloud Architect",
+            "issuer": "Google Cloud",
+            "date": "2021"
+        },
+        {
+            "name": "Azure Administrator Associate",
+            "issuer": "Microsoft",
+            "date": "2022"
+        },
+        {
+            "name": "Devops Bootcamp",
+            "issuer": "CloudCamp",
+            "date": "2025"
+        }
+    ],
     "contact": {
-        "email": "",
+        "email": "mfbenavidesc@gmail.com",
         "linkedin": "https://www.linkedin.com/in/mbenavidesc",
-        "github": ""
+        "github": "https://github.com/mauro666x"
     }
 }

@@ -35,13 +35,17 @@ The dev server runs at `http://localhost:5173/`.
 ```
 personal-webapp/
 ├── public/
-│   └── assets/          # Profile photo, resume PDF, cert badges
+│   └── assets/          # Profile photo, resume PDF
 ├── data.json            # ← All resume content (edit this!)
 ├── index.html           # Semantic HTML with section landmarks
 ├── style.css            # Design system & responsive styles
 ├── main.js              # Data rendering, nav, animations
 ├── vite.config.js       # Vite configuration
-└── package.json
+├── package.json
+├── .gitignore
+├── CHANGELOG.md
+├── WALKTHROUGH.md
+└── README.md
 ```
 
 ## 🛠️ Customization
@@ -58,7 +62,7 @@ Edit **`data.json`** to update all website content:
 | `personal.email` | Contact email |
 | `about.summary` | Professional summary paragraph |
 | `about.highlights` | Array of key strength areas |
-| `skills` | Array of `{ name, icon }` for the tech stack grid |
+| `skillCategories` | Array of `{ category, skills: [{ name, logo, icon, dark }] }` grouped by domain |
 | `experience` | Array of `{ company, role, startDate, endDate, description, highlights }` |
 | `education` | Array of `{ institution, degree, field, startDate, endDate, description }` |
 | `certifications` | Array of `{ name, issuer, date, badgeEmoji }` |
