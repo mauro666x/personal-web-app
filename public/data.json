@@ -171,13 +171,13 @@
             "name": "Google Cloud Certified Professional Cloud Architect",
             "issuer": "Google Cloud",
             "date": "2021",
-            "badgeLogo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg"
+            "badgeLogo": "assets/gcp-cloud-architect-badge.png"
         },
         {
             "name": "Azure Administrator Associate",
             "issuer": "Microsoft",
             "date": "2022",
-            "badgeLogo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg"
+            "badgeLogo": "assets/azure-admin-badge.png"
         },
         {
             "name": "Devops Bootcamp",
