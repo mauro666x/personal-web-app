@@ -153,14 +153,19 @@ function renderEducation() {
   grid.innerHTML = data.education
     .map(edu => `
       <div class="education-card fade-in">
-        <div class="education-icon">🎓</div>
-        <div class="education-degree">${esc(edu.degree || 'Degree')}</div>
-        <div class="education-institution">${esc(edu.institution)}</div>
-        ${edu.startDate || edu.endDate
+        <div class="education-icon">${edu.logo
+        ? `<img src="${esc(edu.logo)}" alt="${esc(edu.institution)}" loading="lazy" class="education-logo${edu.dark ? ' dark-logo' : ''}" />`
+        : '🎓'
+      }</div>
+        <div class="education-info">
+          <div class="education-degree">${esc(edu.degree || 'Degree')}</div>
+          <div class="education-institution">${esc(edu.institution)}</div>
+          ${edu.startDate || edu.endDate
         ? `<div class="education-dates">${esc(edu.startDate || '')} ${edu.startDate && edu.endDate ? '—' : ''} ${esc(edu.endDate || '')}</div>`
         : ''
       }
-        ${edu.description ? `<p class="education-description">${esc(edu.description)}</p>` : ''}
+          ${edu.description ? `<p class="education-description">${esc(edu.description)}</p>` : ''}
+        </div>
       </div>
     `)
     .join('');
@@ -183,9 +188,9 @@ function renderCertifications() {
     .map(cert => `
       <div class="cert-card fade-in">
         <div class="cert-badge">${cert.badgeLogo
-          ? `<img src="${esc(cert.badgeLogo)}" alt="${esc(cert.issuer)}" loading="lazy" class="cert-logo" />`
-          : esc(cert.badgeEmoji || '🏆')
-        }</div>
+        ? `<img src="${esc(cert.badgeLogo)}" alt="${esc(cert.issuer)}" loading="lazy" class="cert-logo" />`
+        : esc(cert.badgeEmoji || '🏆')
+      }</div>
         <div class="cert-info">
           <div class="cert-name">${esc(cert.name)}</div>
           <div class="cert-issuer">${esc(cert.issuer)}</div>
