@@ -9,7 +9,7 @@
         "email": "mfbenavidesc@gmail.com"
     },
     "about": {
-        "summary": "Engineering Director with a track record of building, scaling, and leading teams of 30+ engineers — including managers and tech leads — across multiple geographies (Colombia, Argentina, and the US) and several concurrent client engagements. I define engineering standards, drive hiring strategies, and accelerate delivery pipelines on Azure and GCP. My focus is turning engineering organizations into high-performing teams that ship faster without compromising quality.",
+        "summary": "Engineering Director with a track record of building, scaling, and leading large engineering teams across the Americas while staying hands-on with cloud infrastructure and DevOps. I define engineering standards, drive hiring strategies, and accelerate delivery pipelines on Azure and GCP — and I also design the architectures, CI/CD pipelines, and IaC that power them. My focus is turning engineering organizations into high-performing teams that ship faster without compromising quality.",
         "highlights": [
             "Engineering Director",
             "Org Building & Hiring Strategy",
@@ -102,17 +102,18 @@
         {
             "company": "Valtech",
             "previousName": "formerly Kin+Carta",
-            "role": "Engineering Director",
+            "role": "Engineering Practice Leader & DevOps Engineer",
             "startDate": "Jul 2021",
             "endDate": "Present",
             "location": "Remote",
-            "description": "Directing a 30+ person engineering organization — including managers and tech leads — across Colombia, Argentina, and the US, delivering several concurrent client engagements.",
+            "description": "Leading a large engineering team across multiple regions in the Americas while delivering hands-on DevOps and cloud infrastructure work across several concurrent client engagements.",
             "highlights": [
-                "Built and scaled the engineering org from the ground up: defined roles, led hiring, and established career growth frameworks",
+                "Built and scaled the engineering org: defined roles, led hiring, and established career growth frameworks across regions",
                 "Managed managers and tech leads, running performance reviews, coaching, and succession planning",
                 "Defined and enforced engineering standards, code review processes, and delivery best practices across all teams",
-                "Oversaw cloud architecture strategy on Azure and GCP, accelerating client delivery timelines",
-                "Drove DevOps transformation including CI/CD pipelines (GitHub Actions, Azure DevOps, Jenkins), IaC (Terraform, Kubernetes), and platform engineering"
+                "Designed and implemented scalable cloud architectures on Azure and GCP for client engagements",
+                "Built and maintained CI/CD pipelines using GitHub Actions, Azure DevOps, and Jenkins",
+                "Implemented Infrastructure as Code using Terraform and Kubernetes across multi-cloud environments"
             ]
         },
         {
