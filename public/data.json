@@ -30,10 +30,6 @@
                 {
                     "name": "Node.js",
                     "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-                },
-                {
-                    "name": "Microservices",
-                    "icon": "🧩"
                 }
             ]
         },
