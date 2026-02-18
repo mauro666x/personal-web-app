@@ -1144,6 +1144,24 @@ ul {
     text-align: center;
   }
 
+  /* Scroll indicator mobile — flow below content instead of overlapping */
+  .scroll-indicator {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-10);
+    width: 100%;
+  }
+
+  .hero {
+    padding-bottom: var(--space-8);
+    flex-direction: column;
+    overflow: visible;
+  }
+
   /* Section padding */
   .section {
     padding: var(--space-16) 0;
