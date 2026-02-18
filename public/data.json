@@ -1,22 +1,22 @@
 {
     "personal": {
         "name": "Mauricio Benavides",
-        "title": "Engineering Director | DevOps Engineer",
-        "tagline": "Building and scaling resilient cloud infrastructure and leading high-performing engineering teams.",
+        "title": "Engineering Director | Cloud & DevOps",
+        "tagline": "Directing cross-functional engineering teams to deliver scalable cloud solutions across industries.",
         "photo": "assets/profile.jpg",
         "resumeUrl": "https://www.linkedin.com/in/mbenavidesc",
         "location": "Bogotá, Colombia",
         "email": "mfbenavidesc@gmail.com"
     },
     "about": {
-        "summary": "Passionate engineering leader with deep expertise in cloud infrastructure, DevOps practices, and team management. Specialized in helping organizations build the future using Azure, GCP, Kubernetes, Docker, and Infrastructure as Code. Experienced in designing scalable cloud architectures, implementing secure CI/CD pipelines, and mentoring engineering teams to deliver exceptional results.",
+        "summary": "Engineering Director with a track record of building, scaling, and leading large engineering teams across the Americas while staying hands-on with cloud infrastructure and DevOps. I define engineering standards, drive hiring strategies, and accelerate delivery pipelines on Azure and GCP — and I also design the architectures, CI/CD pipelines, and IaC that power them. My focus is turning engineering organizations into high-performing teams that ship faster without compromising quality.",
         "highlights": [
             "Engineering Director",
-            "Team Leadership & Mentoring",
-            "Cloud Architecture & Design",
-            "DataOps Engineering",
-            "Cloud and Devops Engineering",
-            "CI/CD Pipeline Engineering"
+            "Org Building & Hiring Strategy",
+            "Multi-Team & Multi-Client Leadership",
+            "Cloud Architecture (Azure & GCP)",
+            "Engineering Standards & Processes",
+            "Delivery Acceleration"
         ]
     },
     "skillCategories": [
@@ -102,17 +102,18 @@
         {
             "company": "Valtech",
             "previousName": "formerly Kin+Carta",
-            "role": "Engineering Practice Lead & DevOps Engineer",
+            "role": "Engineering Practice Leader & DevOps Engineer",
             "startDate": "Jul 2021",
             "endDate": "Present",
             "location": "Remote",
-            "description": "Leading engineering teams and driving DevOps transformation across multiple client engagements.",
+            "description": "Leading a large engineering team across multiple regions in the Americas while delivering hands-on DevOps and cloud infrastructure work across several concurrent client engagements.",
             "highlights": [
-                "Provided technical leadership and strategic vision for engineering practices",
-                "Managed and mentored engineering teams including performance reviews and career coaching",
-                "Designed and implemented scalable cloud architectures on Azure and GCP",
-                "Built and maintained secure CI/CD pipelines using GitHub Actions, Azure DevOps, and Jenkins",
-                "Implemented Infrastructure as Code using Terraform and Kubernetes"
+                "Built and scaled the engineering org: defined roles, led hiring, and established career growth frameworks across regions",
+                "Managed managers and tech leads, running performance reviews, coaching, and succession planning",
+                "Defined and enforced engineering standards, code review processes, and delivery best practices across all teams",
+                "Designed and implemented scalable cloud architectures on Azure and GCP for client engagements",
+                "Built and maintained CI/CD pipelines using GitHub Actions, Azure DevOps, and Jenkins",
+                "Implemented Infrastructure as Code using Terraform and Kubernetes across multi-cloud environments"
             ]
         },
         {
@@ -122,11 +123,11 @@
             "startDate": "2020",
             "endDate": "Jul 2021",
             "location": "Bogotá, Colombia",
-            "description": "Managed key client accounts and provided technical sales consulting for cloud solutions.",
+            "description": "Bridged technical strategy and client relationships, owning enterprise accounts and driving cloud adoption initiatives.",
             "highlights": [
-                "Led technical sales consulting for enterprise cloud migration projects",
-                "Managed strategic client accounts and drove revenue growth",
-                "Provided pre-sales technical guidance for cloud platform adoption"
+                "Owned end-to-end technical sales cycle for enterprise cloud migration projects",
+                "Managed strategic client accounts and identified growth opportunities",
+                "Partnered with engineering teams to scope solutions and deliver technical pre-sales guidance"
             ]
         },
         {
@@ -136,11 +137,11 @@
             "startDate": "2018",
             "endDate": "2020",
             "location": "Bogotá, Colombia",
-            "description": "Consulted on cloud product strategy and helped clients adopt cloud-native solutions.",
+            "description": "Advised enterprise clients on cloud-native product strategy and led hands-on adoption of cloud platforms.",
             "highlights": [
-                "Advised clients on cloud product selection and architecture design",
-                "Supported digital transformation initiatives with cloud-first strategies",
-                "Delivered technical workshops and training sessions"
+                "Designed cloud architectures and guided clients through platform selection and migration planning",
+                "Led digital transformation initiatives with cloud-first strategies across multiple accounts",
+                "Delivered technical workshops and enablement sessions to client engineering teams"
             ]
         }
     ],
