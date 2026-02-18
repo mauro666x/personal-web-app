@@ -410,6 +410,19 @@ ul {
   bottom: var(--space-10);
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  padding: var(--space-4);
+  transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+.scroll-indicator:hover .scroll-arrow {
+  opacity: 1;
 }
 
 .scroll-arrow {
@@ -420,6 +433,7 @@ ul {
   transform: rotate(45deg);
   animation: bounce 2s infinite;
   opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 @keyframes bounce {

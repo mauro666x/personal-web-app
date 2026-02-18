@@ -338,9 +338,13 @@ function setupScrollAnimations() {
 // ══════════════════════════════════════════════════
 
 function setupContactForm() {
-  const form = document.getElementById('contactForm');
+  emailjs.init('SaBi3AGGe4YEsisKO');
 
-  form.addEventListener('submit', (e) => {
+  const form = document.getElementById('contactForm');
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('formName').value.trim();
@@ -349,22 +353,30 @@ function setupContactForm() {
 
     if (!name || !email || !message) return;
 
-    // If user has an email, open mailto
-    const toEmail = data.contact.email || 'hello@example.com';
-    const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-    window.open(`mailto:${toEmail}?subject=${subject}&body=${body}`, '_self');
-
-    // Visual feedback
-    const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.textContent;
-    btn.textContent = 'Message Sent! ✓';
+    btn.textContent = 'Sending...';
     btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = originalText;
-      btn.disabled = false;
+
+    try {
+      await emailjs.send('service_woq3r6v', 'template_4nwanpr', {
+        from_name: name,
+        from_email: email,
+        message: message,
+      });
+
+      btn.textContent = 'Message Sent! ✓';
       form.reset();
-    }, 3000);
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 3000);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      btn.textContent = 'Failed to send. Try again.';
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }, 3000);
+    }
   });
 }
 
