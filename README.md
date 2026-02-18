@@ -10,7 +10,7 @@ A modern, minimalist personal portfolio website built with **Vite**, **vanilla J
 - **Responsive** — Mobile-first with hamburger menu, adapts to all screen sizes
 - **Scroll Animations** — Fade-in effects on cards and sections via Intersection Observer
 - **Active Nav Highlighting** — Sticky nav bar highlights current section as you scroll
-- **Contact Form** — Client-side validation with mailto integration
+- **Contact Form** — Sends emails directly via [EmailJS](https://www.emailjs.com/) — no redirect to external mail apps
 
 ## 🚀 Quick Start
 
@@ -105,6 +105,7 @@ The design system uses CSS custom properties defined in `style.css`:
 - **Vite 6** — Build tool & dev server
 - **Vanilla JavaScript** — No frameworks, ES modules
 - **CSS3** — Custom properties, Grid, Flexbox, backdrop-filter
+- **EmailJS** — Client-side email delivery for the contact form
 - **Google Fonts** — Inter typeface
 
 ## 📄 License

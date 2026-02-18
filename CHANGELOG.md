@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [1.2.0] - 2026-02-17
+
+### Added
+
+- **EmailJS Contact Form** — Contact form now sends emails directly via EmailJS instead of redirecting to the device's mail app
+- **Scroll Arrow Navigation** — Hero scroll-down arrow is now clickable and smooth-scrolls to the About section
+- **Arrow Hover Effect** — Scroll arrow transitions to full opacity on hover
+
+### Changed
+
+- **Scroll Indicator** — Converted from `<div>` to `<a>` tag for better semantics and accessibility
+
 ## [1.1.1] - 2026-02-15
 
 ### Changed
